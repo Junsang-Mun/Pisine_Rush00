@@ -6,17 +6,17 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:08 by jinam             #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/05/21 23:18:44 by minseuka         ###   ########.fr       */
+=======
+/*   Updated: 2022/05/21 21:34:11 by jinam            ###   ########.fr       */
+>>>>>>> c8ebcca6de1c6ca13d1d0c66dd00d8ba648befa0
 /*                                                                            */
 /* ************************************************************************** */
 void	rush(int a, int b);
 
 int	main(void)
 {
-	/*rush (5, 3);
-	rush (5, 1);
-	rush (1, 1);
-	rush (1, 5); */
 	rush (4, 4);
 	return (0);
 }
