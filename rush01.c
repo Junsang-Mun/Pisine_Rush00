@@ -6,7 +6,7 @@
 /*   By: jumun <jumun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 17:25:10 by jumun             #+#    #+#             */
-/*   Updated: 2022/05/21 20:02:09 by jinam            ###   ########.fr       */
+/*   Updated: 2022/05/21 20:42:28 by jinam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	middle_line(int col)
 	}
 }
 
-void	rush02(int col, int row, int index_row)
+void	rush01(int col, int row, int index_row)
 {
 	if (index_row == row)
 		head_line(col, 1);
@@ -84,7 +84,7 @@ void	rush(int col, int row)
 	index_row = row;
 	while (index_row > 0)
 	{
-		rush02(col, row, index_row);
+		rush01(col, row, index_row);
 		index_row --;
 	}
 }
