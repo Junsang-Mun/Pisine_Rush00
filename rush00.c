@@ -6,10 +6,9 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:50 by jinam             #+#    #+#             */
-/*   Updated: 2022/05/21 16:58:41 by jumun            ###   ########.fr       */
+/*   Updated: 2022/05/21 20:14:07 by jinam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	rush(int col, int row);
 void	ft_putchar(char ch);
