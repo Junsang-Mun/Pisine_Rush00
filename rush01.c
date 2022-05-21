@@ -6,7 +6,7 @@
 /*   By: jumun <jumun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 17:25:10 by jumun             #+#    #+#             */
-/*   Updated: 2022/05/21 20:42:28 by jinam            ###   ########.fr       */
+/*   Updated: 2022/05/21 21:38:24 by jinam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,22 @@ void	rush02(int col, int row, int index_row);
 
 void	printout(char f_edge, char b_edge, int col, int index_col)
 {
+	char	wall;
+
+	wall = '*';
 	if (f_edge == '*')
 	{
 		if (index_col == 1 || index_col == col)
-			ft_putchar('*');
+			ft_putchar(f_edge);
 		else
-			ft_putchar(' ');
+			ft_putchar(b_edge);
 	}
 	else if (index_col == col)
 		ft_putchar(b_edge);
 	else if (index_col == 1)
 		ft_putchar(f_edge);
 	else
-		ft_putchar('*');
+		ft_putchar(wall);
 }
 
 void	head_line(int col, int flag)
