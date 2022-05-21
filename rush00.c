@@ -6,7 +6,7 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:50 by jinam             #+#    #+#             */
-/*   Updated: 2022/05/21 15:06:18 by jinam            ###   ########.fr       */
+/*   Updated: 2022/05/21 15:17:03 by jumun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -14,6 +14,14 @@
 void rush(int a, int b);
 void ft_putchar(char ch);
 void rush00(int first,int second, int third);
+
+void hamsoo(char a, char b, int first, int count)
+{
+			if (count==1 || count == first)
+				ft_putchar(a);
+			else
+				ft_putchar(b);
+}
 
 void rush00(int first, int second, int third)
 {
@@ -23,12 +31,9 @@ void rush00(int first, int second, int third)
 
 	if (third == 1 || third == second)
 	{
-		while (count > 0)
+		while (count > 0)	
 		{
-			if (count==1 || count == first)
-				ft_putchar('o');
-			else
-				ft_putchar('-');
+			hamsoo('o', '-', first, count);
 			count --;
 		}
 	}
@@ -36,10 +41,7 @@ void rush00(int first, int second, int third)
 	{
 		while (count > 0)
 		{
-			if (count == 1 || count == first)
-				ft_putchar('|');
-			else
-				ft_putchar(' ');
+			hamsoo('|', ' ', first, count);
 			count --;
 		}
 	}
