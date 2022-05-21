@@ -6,55 +6,55 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:50 by jinam             #+#    #+#             */
-/*   Updated: 2022/05/21 15:33:36 by jumun            ###   ########.fr       */
+/*   Updated: 2022/05/21 16:58:41 by jumun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-void	rush(int a, int b);
+void	rush(int col, int row);
 void	ft_putchar(char ch);
-void	rush00(int first, int second, int third);
+void	rush00(int col, int row, int index_row);
 
-void	printout(char a, char b, int first, int count)
+void	printout(char edge, char wall, int col, int index_col)
 {
-	if (count == 1 || count == first)
-		ft_putchar(a);
+	if (index_col == 1 || index_col == col)
+		ft_putchar(edge);
 	else
-		ft_putchar(b);
+		ft_putchar(wall);
 }
 
-void	rush00(int first, int second, int third)
+void	rush00(int col, int row, int index_row)
 {
-	int	count;
+	int	index_col;
 
-	count = first;
-	if (third == 1 || third == second)
+	index_col = col;
+	if (index_row == 1 || index_row == row)
 	{
-		while (count > 0)
+		while (index_col > 0)
 		{
-			printout('o', '-', first, count);
-			count --;
+			printout('o', '-', col, index_col);
+			index_col --;
 		}
 	}
 	else
 	{
-		while (count > 0)
+		while (index_col > 0)
 		{
-			printout('|', ' ', first, count);
-			count --;
+			printout('|', ' ', col, index_col);
+			index_col --;
 		}
 	}
 	ft_putchar('\n');
 }
 
-void	rush(int a, int b)
+void	rush(int col, int row)
 {
-	int	first_cycle;
+	int	index_row;
 
-	first_cycle = b;
-	while (first_cycle > 0)
+	index_row = row;
+	while (index_row > 0)
 	{
-		rush00(a, b, first_cycle);
-		first_cycle --;
+		rush00(col, row, index_row);
+		index_row --;
 	}
 }
