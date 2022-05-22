@@ -6,7 +6,7 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:08 by jinam             #+#    #+#             */
-/*   Updated: 2022/05/22 14:42:11 by minseuka         ###   ########.fr       */
+/*   Updated: 2022/05/22 16:15:06 by jinam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ int	strtoint(char *str)
 	index = 0;
 	outbefore = 0;
 	out = 0;
-	while (47 < str[index] && str[index] < 58)
+	while ('0' <= str[index] && str[index] <= '9')
 	{
 		out = outbefore * 10 + (str[index] - 48);
 		outbefore = out;
 		index ++;
 	}
+	if ((str[index] < '0' || str[index] >= ':') && str[index] != '\0')
+		out = 0;
 	return (out);
 }
 

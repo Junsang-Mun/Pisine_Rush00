@@ -6,7 +6,7 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:50 by jinam             #+#    #+#             */
-/*   Updated: 2022/05/22 15:27:30 by jinam            ###   ########.fr       */
+/*   Updated: 2022/05/22 16:53:12 by jinam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,12 @@ void	printout(char edge, char wall, int col, int index_col)
 		ft_putchar(wall);
 }
 
-void	end_print(int col, int row, int index_col)
+void	end_print(int col)
 {
-	if (col == 1 && row != 1)
-		printout('A', '\0', col, index_col);
-	else if (col == 1 && row == 1)
-		printout('A', '\0', col, index_col);
+	if (col == 1)
+		ft_putchar('A');
 	else
-		printout('C', '\0', col, index_col);
+		ft_putchar('C');
 }
 
 void	rush03(int col, int row, int index_row)
@@ -44,7 +42,7 @@ void	rush03(int col, int row, int index_row)
 			printout('A', 'B', col, index_col);
 			index_col --;
 		}
-		end_print(col, row, index_col);
+		end_print(col);
 	}
 	else
 	{
