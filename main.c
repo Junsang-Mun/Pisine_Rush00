@@ -6,11 +6,7 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:08 by jinam             #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/05/21 23:18:44 by minseuka         ###   ########.fr       */
-=======
-/*   Updated: 2022/05/21 21:34:11 by jinam            ###   ########.fr       */
->>>>>>> c8ebcca6de1c6ca13d1d0c66dd00d8ba648befa0
+/*   Updated: 2022/05/22 11:09:45 by minseuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 void	rush(int a, int b);
