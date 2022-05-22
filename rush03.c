@@ -6,7 +6,7 @@
 /*   By: jinam <jinam@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:29:50 by jinam             #+#    #+#             */
-/*   Updated: 2022/05/21 20:40:47 by jinam            ###   ########.fr       */
+/*   Updated: 2022/05/22 15:27:30 by jinam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	rush(int col, int row)
 {
 	int	index_row;
 
+	if (col <= 0)
+		row = 0;
 	index_row = row;
 	while (index_row > 0)
 	{
